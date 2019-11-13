@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -54,6 +55,7 @@ export class AppComponent implements OnInit {
 
   file: any;
   fileReaded;
+  isChecked;
   fileChanged(e) {
     console.log(e);
     // this.file = e.target.files[0];
@@ -87,13 +89,26 @@ export class AppComponent implements OnInit {
     }
 
   }
-uploadDocument(file) {
-  console.log("submitted");
+  uploadDocument(file) {
+    console.log("submitted");
     // let fileReader = new FileReader();
     // fileReader.onload = (e) => {
     //   console.log(fileReader.result);
     // }
     // fileReader.readAsText(this.file);
     // return true;
-}
+  }
+
+  toggle(e) {
+    this.isChecked = e.target.checked;
+    console.log(this.isChecked);
+    if (this.isChecked) {
+      document.getElementById("upload").style.display = "inline";
+      document.getElementById("write").style.display = "none";
+    }
+    else{
+      document.getElementById("upload").style.display = "none";
+      document.getElementById("write").style.display = "inline";
+    }
+  }
 }
