@@ -39,6 +39,9 @@ h4
 {
     font-size: 20px;
     font-family: monospace;
+    animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
 .status
@@ -56,8 +59,49 @@ h4
 .add-model
 {
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: 14px;
+    top: 14px;
 }
 
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
 
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.loader4 {
+    z-index: 2;
+    position: absolute;
+    top: 110px;
+    left: 285px;
+   width:45px;
+   height:45px;
+   display:inline-block;
+   padding:0px;
+   border-radius:100%;
+   border:5px solid;
+   border-top-color:rgba(246, 36, 89, 1);
+   border-bottom-color:rgba(255,255,255, 0.3);
+   border-left-color:rgba(246, 36, 89, 1);
+   border-right-color:rgba(255,255,255, 0.3);
+   -webkit-animation: loader4 1s ease-in-out infinite;
+   animation: loader4 1s ease-in-out infinite;
+}
+@keyframes loader4 {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(360deg);}
+}
+@-webkit-keyframes loader4 {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(360deg);}
+}
