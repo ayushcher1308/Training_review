@@ -1,0 +1,63 @@
+.heading{
+    font-family: monospace;
+      font-size: 30px;
+      text-align: center;
+    //   width: 100%;
+}
+.cardModel {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width:80%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.cardModel:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.containerModel {
+  padding: 10px 0px;
+  margin:20px;
+  border-radius: 5px;
+}
+
+.model_id
+{
+    background-color: #398B93;
+    color: white;
+    padding: 20px;
+    margin-left: -20px;
+    border-radius:5px 0px 0px 5px;
+    margin-right: 10px;
+}
+
+h4
+{
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.status
+{
+            float: right;
+    color: white;
+    padding: 20px;
+    margin-left: -20px;
+    width: 130px;
+    border-radius: 0px 5px 5px 0px;
+    margin-right: -21px;
+    margin-top: -20px;
+}
+
+.add-model
+{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+

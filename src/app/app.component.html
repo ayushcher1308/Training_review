@@ -1,3 +1,52 @@
-<h1>
-  {{title}}
-</h1>
+<h4 class="heading">
+  Model List</h4>
+<button type="button" class="btn btn-primary btn-lg add-model" data-toggle="modal" data-target="#myModal">Add Model</button>
+
+<div class="cardModel" *ngFor="let data of modelData">
+  <div class="containerModel">
+    <h4><b>
+      <span class="model_id">{{data.id}}</span>
+      <span>{{data.model_name}}</span>
+      <span class="status" [ngStyle]="{'background-color':data.status === 'trained' ? '#057310':'red' }">{{data.status | uppercase}}</span>
+      </b></h4>
+  </div>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" style="text-align: center">Add New Model</h4>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Model:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="model-name" placeholder="Enter Model Name" required>
+      </div>
+    </div>
+    <div class="form-group">
+
+      <div class="col-sm-10">
+        <input type="file" class="custom-file-input" id="customFile">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
