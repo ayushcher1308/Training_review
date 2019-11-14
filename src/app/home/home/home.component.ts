@@ -95,6 +95,7 @@ csv()
   gotoModel(id)
   {
     console.log(id);
-    this.router.navigate(['/model',id]);
+    this.router.navigate(['/model',id],{queryParams: {'id':id}});
+    localStorage.setItem("model",JSON.stringify(this.modelData));
   }
 }
